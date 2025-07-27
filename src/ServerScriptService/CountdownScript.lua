@@ -26,7 +26,7 @@ while true do
 		end
 
 	elseif count < 2 then
-		StartCountdown:FireAllClients("Waiting for more players... (" .. count .. ")")
+		StartCountdown:FireAllClients("Waiting for more players ......(" .. count .. ")")
 		countStarted = false
 	end
 

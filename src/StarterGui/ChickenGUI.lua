@@ -6,5 +6,5 @@ gui.Enabled = false
 
 ShowChickenGUI.OnClientEvent:Connect(function(show)
 	gui.Enabled = show
-	print("Chicken GUI visible:", show)
+	print("Chicken GUI visible", show)
 end)

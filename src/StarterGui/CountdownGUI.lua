@@ -14,7 +14,7 @@ event.OnClientEvent:Connect(function(msg)
 		if msg == 0 then
 			label.Text = ""
 		else
-			label.Text = "Game starts in " .. msg .. " second" .. (msg == 1 and "" or "s")
+			label.Text = "Game starts ins " .. msg .. " second" .. (msg == 1 and "" or "s")
 		end
 
 	elseif typeof(msg) == "string" then

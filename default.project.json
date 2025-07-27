@@ -1,0 +1,30 @@
+{
+  "name": "ChickenChase",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "RemoteEvent": {
+        "$className": "RemoteEvent"
+      },
+      "Scripts": {
+        "$className": "Folder",
+        "$path": "src/ReplicatedStorage"
+      }
+    },
+    "ServerScriptService": {
+      "ServerScripts": {
+        "$className": "Folder",
+        "$path": "src/ServerScriptService"
+      }
+    },
+    "StarterGui": {
+      "GameGui": {
+        "$className": "ScreenGui",
+        "$path": "src/StarterGui"
+      }
+    },
+    "Workspace": {
+      "$ignoreUnknownInstances": true
+    }
+  }
+}
