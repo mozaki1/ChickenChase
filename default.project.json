@@ -39,11 +39,18 @@
           "$path": "src/ChickenGUI"
         }
       },
-        "CountdownGUI": {
+       "CountdownGUI": {
         "$className": "ScreenGui",
         "Scripts": {
           "$className": "Folder",
           "$path": "src/CountdownGUI"
+        }
+      },
+       "FarmerGUI": {
+        "$className": "ScreenGui",
+        "Scripts": {
+          "$className": "Folder",
+          "$path": "src/FarmerGUI"
         }
       }
 
