@@ -17,11 +17,36 @@
         "$path": "src/ServerScriptService"
       }
     },
-    "StarterGui": {
+     "StarterGui": {
       "GameGui": {
         "$className": "ScreenGui",
-        "$path": "src/StarterGui"
+        "Files": {
+          "$className": "Folder",
+          "$path": "src/GameGui"
+        }
+      },
+      "ButtonsGUI": {
+        "$className": "ScreenGui",
+        "Scripts": {
+          "$className": "Folder",
+          "$path": "src/ButtonsGUI"
+        }
+      },
+      "ChickenGUI": {
+        "$className": "ScreenGui",
+        "Scripts": {
+          "$className": "Folder",
+          "$path": "src/ChickenGUI"
+        }
+      },
+        "CountdownGUI": {
+        "$className": "ScreenGui",
+        "Scripts": {
+          "$className": "Folder",
+          "$path": "src/CountdownGUI"
+        }
       }
+
     },
     "Workspace": {
       "$ignoreUnknownInstances": true
