@@ -52,6 +52,13 @@
           "$className": "Folder",
           "$path": "src/FarmerGUI"
         }
+      },
+       "startScreen": {
+        "$className": "ScreenGui",
+        "Scripts": {
+          "$className": "Folder",
+          "$path": "src/startScreen"
+        }
       }
 
     },
