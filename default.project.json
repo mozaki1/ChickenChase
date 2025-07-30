@@ -41,7 +41,12 @@
            "$path": "src/client/FarmerScript.client.lua"
         },
         "Frame": {
-          "$className": "Frame"
+          "$className": "Frame",
+          "UICorner": {
+           "$className": "UICorner"
+        }, "UIStroke": {
+           "$className": "UIStroke"
+        }
         }
       },
       "CountdownGUI": {
