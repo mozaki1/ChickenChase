@@ -34,6 +34,16 @@
           "$className": "Frame"
         }
       }
+      ,
+      "FarmerGUI": {
+        "$className": "ScreenGui",
+        "FarmerScript": {
+           "$path": "src/client/FarmerScript.client.lua"
+        },
+        "Frame": {
+          "$className": "Frame"
+        }
+      }
     },
 
     "Workspace": {
