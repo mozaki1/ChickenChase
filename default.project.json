@@ -39,7 +39,10 @@
         }
           },
           "ChickenButton": {
-           "$className": "TextButton"
+           "$className": "TextButton",
+           "ChickenButtonScript": {
+           "$path": "src/client/ChickenButton.client.lua"
+        }
           
           }
 
