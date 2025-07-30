@@ -43,8 +43,20 @@
         "Frame": {
           "$className": "Frame"
         }
+      },
+      "CountdownGUI": {
+        "$className": "ScreenGui",
+       
+          "TextLabel": {
+            "$className": "TextLabel",
+             "CountDownScript": {
+           "$path": "src/client/CountdownScriptGUI.client.lua"
+        }
+        }
       }
+      
     },
+    
 
     "Workspace": {
       "$properties": {
@@ -60,7 +72,7 @@
           "Size": [512, 20, 512]
         }
       }
-    },
+    }, 
 
     "Lighting": {
       "$properties": {
