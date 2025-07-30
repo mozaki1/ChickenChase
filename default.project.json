@@ -62,9 +62,13 @@
         "Frame": {
           "$className": "Frame",
           "UICorner": {
+      
            "$className": "UICorner"
         }, "UIStroke": {
            "$className": "UIStroke"
+            }, "TextBox": {
+           "$className": "TextBox"
+           
         }
         }
       },
