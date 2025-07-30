@@ -31,7 +31,21 @@
            "$path": "src/client/ButtonScript.client.lua"
         },
         "Frame": {
-          "$className": "Frame"
+          "$className": "Frame",
+          "FarmerButton": {
+           "$className": "TextButton",
+           "FarmerButton": {
+           "$path": "src/client/FarmerButton.client.lua"
+        }
+          },
+          "ChickenButton": {
+           "$className": "TextButton"
+          
+          }
+
+        
+          
+
         }
       }
       ,
@@ -41,11 +55,11 @@
            "$path": "src/client/FarmerScript.client.lua"
         },
         "Frame": {
-          "$className": "Frame",
+          "$className": "UICorner",
           "UICorner": {
-           "$className": "UICorner"
-        }, "UIStroke": {
            "$className": "UIStroke"
+        }, "UIStroke": {
+           "$className": "TextLabel"
          }, "TextLabel": {
            "$className": "TextLabel"
 
@@ -62,7 +76,6 @@
         "Frame": {
           "$className": "Frame",
           "UICorner": {
-      
            "$className": "UICorner"
         }, "UIStroke": {
            "$className": "UIStroke"
