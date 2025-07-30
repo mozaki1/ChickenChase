@@ -22,6 +22,12 @@
         }
       }
     },
+        "StarterGui": {
+      "Buttons": {
+        "$path": "src/gui"
+      }
+    
+    },
 
     "Workspace": {
       "$properties": {
