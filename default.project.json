@@ -46,9 +46,29 @@
            "$className": "UICorner"
         }, "UIStroke": {
            "$className": "UIStroke"
+         }, "TextLabel": {
+           "$className": "TextLabel"
+
+           
+        }
+        
+        }
+      },
+            "ChickenGUI": {
+        "$className": "ScreenGui",
+        "FarmerScript": {
+           "$path": "src/client/ChickenScript.client.lua"
+        },
+        "Frame": {
+          "$className": "Frame",
+          "UICorner": {
+           "$className": "UICorner"
+        }, "UIStroke": {
+           "$className": "UIStroke"
         }
         }
       },
+      
       "CountdownGUI": {
         "$className": "ScreenGui",
        
