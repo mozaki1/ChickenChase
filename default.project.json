@@ -24,11 +24,37 @@
     },
 
     "StarterGui": {
-      
-      "ButtonsGUI": {
+       "ButtonsGUI": {
         "$className": "ScreenGui",
         "ButtonScript": {
            "$path": "src/client/ButtonScript.client.lua"
+        },
+        "Frame": {
+          "$className": "Frame",
+          "FarmerButton": {
+           "$className": "TextButton",
+           "FarmerButton": {
+           "$path": "src/client/FarmerButton.client.lua"
+        }
+          },
+          "ChickenButton": {
+           "$className": "TextButton",
+           "ChickenButtonScript": {
+           "$path": "src/client/ChickenButton.client.lua"
+        }
+          
+          }
+
+        
+          
+
+        }
+      }
+      ,
+      "StartScreen": {
+        "$className": "ScreenGui",
+        "StartScreen": {
+           "$path": "src/client/StartScreen.client.lua"
         },
         "Frame": {
           "$className": "Frame",
@@ -71,7 +97,7 @@
         
         }
       },
-            "ChickenGUI": {
+      "ChickenGUI": {
         "$className": "ScreenGui",
         "FarmerScript": {
            "$path": "src/client/ChickenScript.client.lua"
@@ -99,6 +125,8 @@
         }
         }
       }
+
+      
       
     },
     

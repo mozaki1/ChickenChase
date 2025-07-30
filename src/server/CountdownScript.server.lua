@@ -13,6 +13,9 @@ local countStarted = false
 while true do
 	local count = #Players:GetPlayers()
 
+    
+
+
 	if count >= 2 and not countStarted then
 		countStarted = true
 
@@ -26,7 +29,7 @@ while true do
 		end
 
 	elseif count < 2 then
-		StartCountdown:FireAllClients("Waiting for more players ......(" .. count .. ")")
+		StartCountdown:FireAllClients("waiting for more players... (" .. count .. ")")
 		countStarted = false
 	end
 
