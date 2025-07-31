@@ -4,19 +4,23 @@
     "$className": "DataModel",
 
     "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
       "Shared": {
         "$path": "src/shared"
       }
     },
 
     "ServerScriptService": {
+      "$className": "ServerScriptService",
       "Server": {
         "$path": "src/server"
       }
     },
 
     "StarterPlayer": {
+      "$className": "StarterPlayer",
       "StarterPlayerScripts": {
+        "$className": "StarterPlayerScripts",
         "Client": {
           "$path": "src/client"
         }
@@ -24,114 +28,79 @@
     },
 
     "StarterGui": {
-       "ButtonsGUI": {
+      "$className": "StarterGui",
+
+      "ButtonsGUI": {
         "$className": "ScreenGui",
         "ButtonScript": {
-           "$path": "src/client/ButtonScript.client.lua"
+          "$path": "src/client/ButtonScript.client.lua"
         },
         "Frame": {
           "$className": "Frame",
           "FarmerButton": {
-           "$className": "TextButton",
-           "FarmerButton": {
-           "$path": "src/client/FarmerButton.client.lua"
-        }
+            "$className": "TextButton",
+            "FarmerButton": {
+              "$path": "src/client/FarmerButton.client.lua"
+            }
           },
           "ChickenButton": {
-           "$className": "TextButton",
-           "ChickenButtonScript": {
-           "$path": "src/client/ChickenButton.client.lua"
-        }
-          
+            "$className": "TextButton",
+            "ChickenButtonScript": {
+              "$path": "src/client/ChickenButton.client.lua"
+            }
           }
-
-        
-          
-
         }
-      }
-      ,
+      },
+
       "StartScreen": {
         "$className": "ScreenGui",
         "StartScreen": {
-           "$path": "src/client/StartScreen.client.lua"
-        },
-        "Frame": {
-          "$className": "Frame",
-          "FarmerButton": {
-           "$className": "TextButton",
-           "FarmerButton": {
-           "$path": "src/client/FarmerButton.client.lua"
+          "$path": "src/client/StartScreen.client.lua"
         }
-          },
-          "ChickenButton": {
-           "$className": "TextButton",
-           "ChickenButtonScript": {
-           "$path": "src/client/ChickenButton.client.lua"
-        }
-          
-          }
+      },
 
-        
-          
-
-        }
-      }
-      ,
       "FarmerGUI": {
         "$className": "ScreenGui",
         "FarmerScript": {
-           "$path": "src/client/FarmerScript.client.lua"
+          "$path": "src/client/FarmerScript.client.lua"
         },
         "Frame": {
-          "$className": "UICorner",
-          "UICorner": {
-           "$className": "UIStroke"
-        }, "UIStroke": {
-           "$className": "TextLabel"
-         }, "TextLabel": {
-           "$className": "TextLabel"
-
-           
-        }
-        
+          "$className": "Frame"
         }
       },
+
       "ChickenGUI": {
         "$className": "ScreenGui",
         "FarmerScript": {
-           "$path": "src/client/ChickenScript.client.lua"
+          "$path": "src/client/ChickenScript.client.lua"
         },
         "Frame": {
           "$className": "Frame",
           "UICorner": {
-           "$className": "UICorner"
-        }, "UIStroke": {
-           "$className": "UIStroke"
-            }, "TextBox": {
-           "$className": "TextBox"
-           
-        }
+            "$className": "UICorner"
+          },
+          "UIStroke": {
+            "$className": "UIStroke"
+          },
+          "TextBox": {
+            "$className": "TextBox"
+          }
         }
       },
-      
+
       "CountdownGUI": {
         "$className": "ScreenGui",
-       
-          "TextLabel": {
-            "$className": "TextLabel",
-             "CountDownScript": {
-           "$path": "src/client/CountdownScriptGUI.client.lua"
-        }
+        "TextLabel": {
+          "$className": "TextLabel",
+          "CountDownScript": {
+            "$path": "src/client/CountdownScriptGUI.client.lua"
+          }
         }
       }
-
-      
-      
     },
-    
 
     "Workspace": {
+      "$className": "Workspace",
       "$properties": {
         "FilteringEnabled": true
       },
@@ -144,10 +113,22 @@
           "Position": [0, -10, 0],
           "Size": [512, 20, 512]
         }
+      },
+      "Maps": {
+        "$className": "Folder",
+        "Map1": {
+          "$className": "Model",
+          "$path": "src/server/Maps/Map1"
+        },
+        "Map2": {
+          "$className": "Model",
+          "$path": "src/server/Maps/Map2"
+        }
       }
-    }, 
+    },
 
     "Lighting": {
+      "$className": "Lighting",
       "$properties": {
         "Ambient": [0, 0, 0],
         "Brightness": 2,
@@ -158,6 +139,7 @@
     },
 
     "SoundService": {
+      "$className": "SoundService",
       "$properties": {
         "RespectFilteringEnabled": true
       }
