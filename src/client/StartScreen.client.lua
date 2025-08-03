@@ -1,13 +1,12 @@
-local splash = script.Parent  -- startScreen
+local splash = script.Parent  -- StartScreen (ScreenGui)
 
--- Ensure splash is enabled at start
 splash.Enabled = true
-
--- Wait 3 seconds, then hide and destroy the splash screen
 task.wait(3)
-splash.Enabled = false
 splash:Destroy()
 
--- Note: AccessModifierType cannot be set from a script at runtime.
--- If you want to restrict editing/running this script, use Studio's permissions or Team Create settings.
-
+-- Now show the main menu GUI
+local playerGui = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+local mainMenu = playerGui:FindFirstChild("MainMenuGUI")
+if mainMenu then
+	mainMenu.Enabled = true
+end
