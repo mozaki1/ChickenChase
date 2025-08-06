@@ -1,7 +1,6 @@
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
--- Create RemoteEvents if they don't already exist
 local StartCountdown = ReplicatedStorage:FindFirstChild("StartCountdown") or Instance.new("RemoteEvent", ReplicatedStorage)
 StartCountdown.Name = "StartCountdown"
 
@@ -9,6 +8,13 @@ local sendSignal = ReplicatedStorage:FindFirstChild("30SecondSignal") or Instanc
 sendSignal.Name = "30SecondSignal"
 
 local countStarted = false
+
+local function TeleportPlayers(cframe)
+	for i, player in Players:GetPlayers() do
+		if not player.Character then continue end
+		player.Character:PivotTo(cframe)
+	end	
+end
 
 while true do
 	local count = #Players:GetPlayers()
@@ -25,6 +31,8 @@ while true do
 
 			if seconds == 0 then
 				sendSignal:FireAllClients()
+				print("Game starting penchodt")
+				TeleportPlayers(workspace.SpawnFarmMap.CFrame * CFrame.new(0, 2, 0))
 			end
 		end
 
