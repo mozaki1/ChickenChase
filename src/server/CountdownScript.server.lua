@@ -31,6 +31,9 @@ end
 local function Intermission()
 	print("Lobby")
 	workspace:SetAttribute("Status", "Game starting in")
+	for _, player in ipairs(Players:GetPlayers()) do
+		player.Team = nil
+	end
 	TeleportPlayers(workspace.SpawnLocation.CFrame * CFrame.new(0, 2, 0))
 	Countdown(lobby_time)
 	sendSignal:FireAllClients()
