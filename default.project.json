@@ -96,17 +96,6 @@
       "$className": "Workspace",
       "$properties": {
         "FilteringEnabled": true
-      },
-      "Maps": {
-        "$className": "Folder",
-        "Map1": {
-          "$className": "Model",
-          "$path": "src/server/Maps/Map1"
-        },
-        "Map2": {
-          "$className": "Model",
-          "$path": "src/server/Maps/Map2"
-        }
       }
     },
     "Lighting": {
