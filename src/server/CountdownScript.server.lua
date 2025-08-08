@@ -11,8 +11,9 @@ local countStarted = false
 
 local function TeleportPlayers(cframe)
 	for i, player in Players:GetPlayers() do
-		if not player.Character then continue end
-		player.Character:PivotTo(cframe)
+		if  player.Character then
+			player.Character:PivotTo(cframe)
+		end
 	end	
 end
 
