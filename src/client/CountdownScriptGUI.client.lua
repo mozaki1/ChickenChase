@@ -13,7 +13,6 @@ event.OnClientEvent:Connect(function(msg)
 	if typeof(msg) == "number" then
 		if msg == 0 then
 			label.Text = ""
-			label.Size = 40
 		else
 			label.Text = "game starts in " .. msg .. " second" .. (msg == 1 and "" or "s")
 		end
