@@ -17,39 +17,7 @@
 
     "StarterGui": {
       "$className": "StarterGui",
-      "MainMenuGUI": {
-        "$className": "ScreenGui",
-        "$properties": {
-          "Enabled": false
-        },
-        "ButtonScript": {
-          "$path": "src/client/ButtonScript.client.lua"
-        },
-        "Frame": {
-          "$className": "Frame",
-          "FarmerButton": {
-            "$className": "TextButton",
-            "FarmerButton": {
-              "$path": "src/client/FarmerButton.client.lua"
-            }
-          },
-          "ChickenButton": {
-            "$className": "TextButton",
-            "ChickenButtonScript": {
-              "$path": "src/client/ChickenButton.client.lua"
-            }
-          }
-        }
-      },
-      "StartScreen": {
-        "$className": "ScreenGui",
-        "StartScreen": {
-          "$path": "src/client/StartScreen.client.lua"
-        },
-        "ImageLabel": {
-          "$className": "ImageLabel"
-        }
-      },
+    
       "FarmerGUI": {
         "$className": "ScreenGui",
         "FarmerScript": {
