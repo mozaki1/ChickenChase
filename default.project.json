@@ -14,7 +14,6 @@
         "$path": "src/server"
       }
     },
-
     "StarterGui": {
       "$className": "StarterGui",
     
@@ -53,33 +52,18 @@
             "$path": "src/client/CountdownScriptGUI.client.lua"
           }
         }
+      },
+      "FarmerCountdown": {
+        "$className": "ScreenGui",
+        "FarmerCountdownScript": {
+          "$path": "src/client/FarmerCountdown.client.lua"
+        }
       }
     },
     "Workspace": {
       "$className": "Workspace",
       "$properties": {
         "FilteringEnabled": true
-      },
-      "Baseplate": {
-        "$className": "Part",
-        "$properties": {
-          "Anchored": true,
-          "Color": [0.38823, 0.37254, 0.38823],
-          "Locked": true,
-          "Position": [0, -10, 0],
-          "Size": [512, 20, 512]
-        }
-      },
-      "Maps": {
-        "$className": "Folder",
-        "Map1": {
-          "$className": "Model",
-          "$path": "src/server/Maps/Map1"
-        },
-        "Map2": {
-          "$className": "Model",
-          "$path": "src/server/Maps/Map2"
-        }
       }
     },
     "Lighting": {

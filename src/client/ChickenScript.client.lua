@@ -7,13 +7,15 @@ local gui = script.Parent
 gui.Enabled = false
 
 local function updateGui()
-	if player.Team and player.Team.Name == "Chickens" then
+	local status = workspace:GetAttribute("Status")
+	if player.Team and player.Team.Name == "Chickens" and status ~= "Waiting for players..." and status ~= "Game starting in" then
 		gui.Enabled = true
-		print("Chicken GUI showing now")
 	else
 		gui.Enabled = false
 	end
 end
+
 updateGui()
 
 player:GetPropertyChangedSignal("Team"):Connect(updateGui)
+workspace:GetAttributeChangedSignal("Status"):Connect(updateGui)
