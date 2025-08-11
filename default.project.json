@@ -14,42 +14,9 @@
         "$path": "src/server"
       }
     },
-
     "StarterGui": {
       "$className": "StarterGui",
-      "MainMenuGUI": {
-        "$className": "ScreenGui",
-        "$properties": {
-          "Enabled": false
-        },
-        "ButtonScript": {
-          "$path": "src/client/ButtonScript.client.lua"
-        },
-        "Frame": {
-          "$className": "Frame",
-          "FarmerButton": {
-            "$className": "TextButton",
-            "FarmerButton": {
-              "$path": "src/client/FarmerButton.client.lua"
-            }
-          },
-          "ChickenButton": {
-            "$className": "TextButton",
-            "ChickenButtonScript": {
-              "$path": "src/client/ChickenButton.client.lua"
-            }
-          }
-        }
-      },
-      "StartScreen": {
-        "$className": "ScreenGui",
-        "StartScreen": {
-          "$path": "src/client/StartScreen.client.lua"
-        },
-        "ImageLabel": {
-          "$className": "ImageLabel"
-        }
-      },
+    
       "FarmerGUI": {
         "$className": "ScreenGui",
         "FarmerScript": {
@@ -77,6 +44,30 @@
           }
         }
       },
+      "BearTrap": {
+    "$className": "Model",
+    "Close": {
+      "$className": "Part"
+    },
+    "Open": {
+      "$className": "Part"
+    },
+    "HitBox": {
+      "$className": "Part",
+      "TrapScript": {
+          "$path": "src/server/TrapScript.server.lua"
+        },
+      "Bang": {
+        "$className": "Sound"
+      },
+      "Captured": {
+        "$className": "BoolValue"
+      },
+      "HitBox Terrain Joint": {
+        "$className": "Weld"
+      }
+    }
+  },
       "CountdownGUI": {
         "$className": "ScreenGui",
         "TextLabel": {
@@ -85,33 +76,13 @@
             "$path": "src/client/CountdownScriptGUI.client.lua"
           }
         }
+
       }
     },
     "Workspace": {
       "$className": "Workspace",
       "$properties": {
         "FilteringEnabled": true
-      },
-      "Baseplate": {
-        "$className": "Part",
-        "$properties": {
-          "Anchored": true,
-          "Color": [0.38823, 0.37254, 0.38823],
-          "Locked": true,
-          "Position": [0, -10, 0],
-          "Size": [512, 20, 512]
-        }
-      },
-      "Maps": {
-        "$className": "Folder",
-        "Map1": {
-          "$className": "Model",
-          "$path": "src/server/Maps/Map1"
-        },
-        "Map2": {
-          "$className": "Model",
-          "$path": "src/server/Maps/Map2"
-        }
       }
     },
     "Lighting": {
