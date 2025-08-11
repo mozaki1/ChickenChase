@@ -44,6 +44,30 @@
           }
         }
       },
+      "BearTrap": {
+    "$className": "Model",
+    "Close": {
+      "$className": "Part"
+    },
+    "Open": {
+      "$className": "Part"
+    },
+    "HitBox": {
+      "$className": "Part",
+      "TrapScript": {
+          "$path": "src/server/TrapScript.server.lua"
+        },
+      "Bang": {
+        "$className": "Sound"
+      },
+      "Captured": {
+        "$className": "BoolValue"
+      },
+      "HitBox Terrain Joint": {
+        "$className": "Weld"
+      }
+    }
+  },
       "CountdownGUI": {
         "$className": "ScreenGui",
         "TextLabel": {
@@ -52,12 +76,7 @@
             "$path": "src/client/CountdownScriptGUI.client.lua"
           }
         }
-      },
-      "FarmerCountdown": {
-        "$className": "ScreenGui",
-        "FarmerCountdownScript": {
-          "$path": "src/client/FarmerCountdown.client.lua"
-        }
+
       }
     },
     "Workspace": {
