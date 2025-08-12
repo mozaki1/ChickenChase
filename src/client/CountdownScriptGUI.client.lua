@@ -1,42 +1,31 @@
+-- Assumes this LocalScript is a child of the TextLabel it controls
+
 local label = script.Parent
 label.BackgroundTransparency = 1
 label.TextScaled = true
-label.Visible = false
-label.TextColor3 = Color3.new(0, 0, 0)
+label.Visible = false -- Start hidden
+label.TextColor3 = Color3.new(1, 1, 1)
 label.TextStrokeTransparency = 0
 
 local event = game.ReplicatedStorage:WaitForChild("StartCountdown")
 
-<<<<<<< HEAD
 event.OnClientEvent:Connect(function(msg)
 	label.Visible = true
 
 	if typeof(msg) == "number" then
-		if msg == 0 then
-			label.Text = ""
+		-- This is the countdown
+		if msg > 0 then
+			task.wait(2) -- Wait for 2 seconds to show the message
+			label.Text = "Game starts in " .. msg .. " second" .. (msg == 1 and "" or "s")
 		else
-			label.Text = "game starts in " .. msg .. " second" .. (msg == 1 and "" or "s")
+			-- The countdown has reached 0
+			label.Text = "Game Starting!"
+		
+			label.Visible = false -- Then hide the label
 		end
 
 	elseif typeof(msg) == "string" then
+		-- This is for messages like "Waiting for more players"
 		label.Text = msg
-
-		if msg == "game starting!" then
-			task.wait(2)
-			label.Visible = false
-		end
 	end
 end)
-=======
-	if gameStatus == "In-Game" or gameStatus == "Game starting in" then
-		gui.Text = (gameStatus == "In-Game" and "Game ending in: " or "Game starting in: ") .. clockTime
-	else
-		gui.Text = gameStatus
-	end
-end
-
-workspace:GetAttributeChangedSignal("Clock"):Connect(UpdateStatus)
-workspace:GetAttributeChangedSignal("Status"):Connect(UpdateStatus)
-
---gui.Text = "Game starting..."
->>>>>>> c2521cf5745653cba73b445ea9f82ef4f44e1fdb
