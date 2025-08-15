@@ -10,8 +10,8 @@ sendSignal.Name = "30SecondSignal"
 local countStarted = false
 
 local function TeleportPlayers(cframe)
-	for i, player in Players:GetPlayers() do
-		if  player.Character then
+	for _, player in ipairs(Players:GetPlayers()) do
+		if player.Character then
 			player.Character:PivotTo(cframe)
 		end
 	end	
@@ -19,9 +19,6 @@ end
 
 while true do
 	local count = #Players:GetPlayers()
-
-    
-
 
 	if count >= 2 and not countStarted then
 		countStarted = true
@@ -32,15 +29,15 @@ while true do
 
 			if seconds == 0 then
 				sendSignal:FireAllClients()
-				print("Game starting penchodt")
+				print("Game starting...")
 				TeleportPlayers(workspace.SpawnFarmMap.CFrame * CFrame.new(0, 2, 0))
 			end
 		end
 
 	elseif count < 2 then
-		StartCountdown:FireAllClients("waiting for more players... (" .. count .. ")")
+		StartCountdown:FireAllClients("Waiting for players (" .. count .. ")")
 		countStarted = false
 	end
 
-	task.wait(2)
+	task.wait(1) -- update faster so player count changes are shown quickly
 end
