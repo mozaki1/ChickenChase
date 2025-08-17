@@ -3,20 +3,16 @@
   "tree": {
     "$className": "DataModel",
     "ReplicatedStorage": {
-      "$className": "ReplicatedStorage",
       "Shared": {
         "$path": "src/shared"
       }
     },
     "ServerScriptService": {
-      "$className": "ServerScriptService",
       "Server": {
         "$path": "src/server"
       }
     },
     "StarterGui": {
-      "$className": "StarterGui",
-    
       "FarmerGUI": {
         "$className": "ScreenGui",
         "FarmerScript": {
@@ -28,7 +24,7 @@
       },
       "ChickenGUI": {
         "$className": "ScreenGui",
-        "FarmerScript": {
+        "ChickenScript": { 
           "$path": "src/client/ChickenScript.client.lua"
         },
         "Frame": {
@@ -44,30 +40,6 @@
           }
         }
       },
-      "BearTrap": {
-    "$className": "Model",
-    "Close": {
-      "$className": "Part"
-    },
-    "Open": {
-      "$className": "Part"
-    },
-    "HitBox": {
-      "$className": "Part",
-      "TrapScript": {
-          "$path": "src/server/TrapScript.server.lua"
-        },
-      "Bang": {
-        "$className": "Sound"
-      },
-      "Captured": {
-        "$className": "BoolValue"
-      },
-      "HitBox Terrain Joint": {
-        "$className": "Weld"
-      }
-    }
-  },
       "CountdownGUI": {
         "$className": "ScreenGui",
         "TextLabel": {
@@ -76,11 +48,33 @@
             "$path": "src/client/CountdownScriptGUI.client.lua"
           }
         }
-
       }
     },
-    "Workspace": {
-      "$className": "Workspace",
+    "Workspace": { 
+      "BearTrap": {
+        "$className": "Model",
+        "Close": {
+          "$className": "Part"
+        },
+        "Open": {
+          "$className": "Part"
+        },
+        "HitBox": {
+          "$className": "Part",
+          "TrapScript": {
+            "$path": "src/server/TrapScript.server.lua"
+          },
+          "Bang": {
+            "$className": "Sound"
+          },
+          "Captured": {
+            "$className": "BoolValue"
+          },
+          "HitBox Terrain Joint": {
+            "$className": "Weld"
+          }
+        }
+      },
       "$properties": {
         "FilteringEnabled": true
       }
