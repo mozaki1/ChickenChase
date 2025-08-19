@@ -4,9 +4,8 @@ local label = script.Parent
 label.BackgroundTransparency = 1
 label.TextScaled = true
 label.Visible = false -- Start hidden
-label.TextColor3 = Color3.new(0, 0, 0) -- black text
-label.TextStrokeColor3 = Color3.new(1, 1, 1) -- white outline
-label.TextStrokeTransparency = 0 -- fully visible outline
+label.TextColor3 = Color3.new(1, 1, 1)
+label.TextStrokeTransparency = 0
 
 local event = game.ReplicatedStorage:WaitForChild("StartCountdown")
 
