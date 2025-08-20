@@ -12,11 +12,13 @@
       "$className": "ServerScriptService",
       "Server": {
         "$path": "src/server"
+      },
+      "TrapScript": {
+        "$path": "src/server/TrapScript.server.lua"
       }
     },
     "StarterGui": {
       "$className": "StarterGui",
-    
       "FarmerGUI": {
         "$className": "ScreenGui",
         "FarmerScript": {
@@ -28,7 +30,7 @@
       },
       "ChickenGUI": {
         "$className": "ScreenGui",
-        "FarmerScript": {
+        "ChickenScript": {
           "$path": "src/client/ChickenScript.client.lua"
         },
         "Frame": {
@@ -44,30 +46,63 @@
           }
         }
       },
+      "ShopGUI": {
+        "$className": "ScreenGui",
+        "MainFrame": {
+          "$className": "Frame",
+          "$properties": {
+            "BackgroundTransparency": 1
+          },
+          "ShopFrame": {
+            "$className": "Frame",
+            "ScrollingFrame": {
+              "$className": "ScrollingFrame"
+            },
+            "X": {
+              "$className": "ImageButton",
+              "XButtonScript": {
+                "$path": "src/client/XButton.client.lua"
+              }
+            },
+            "TextLabel": {
+              "$className": "TextLabel"
+            }
+          },
+          "SideButtonsFrame": {
+            "$className": "Frame",
+            "ShopButton": {
+              "$className": "ImageButton",
+              "ShopButtonScript": {
+                "$path": "src/client/ShopButton.client.lua"
+              }
+            }
+          }
+        }
+      },
       "BearTrap": {
-    "$className": "Model",
-    "Close": {
-      "$className": "Part"
-    },
-    "Open": {
-      "$className": "Part"
-    },
-    "HitBox": {
-      "$className": "Part",
-      "TrapScript": {
-          "$path": "src/server/TrapScript.server.lua"
+        "$className": "Model",
+        "Close": {
+          "$className": "Part"
         },
-      "Bang": {
-        "$className": "Sound"
+        "Open": {
+          "$className": "Part"
+        },
+        "HitBox": {
+          "$className": "Part",
+          "TrapScript": {
+            "$path": "src/server/TrapScript.server.lua"
+          },
+          "Bang": {
+            "$className": "Sound"
+          },
+          "Captured": {
+            "$className": "BoolValue"
+          },
+          "HitBox Terrain Joint": {
+            "$className": "Weld"
+          }
+        }
       },
-      "Captured": {
-        "$className": "BoolValue"
-      },
-      "HitBox Terrain Joint": {
-        "$className": "Weld"
-      }
-    }
-  },
       "CountdownGUI": {
         "$className": "ScreenGui",
         "TextLabel": {
@@ -76,7 +111,6 @@
             "$path": "src/client/CountdownScriptGUI.client.lua"
           }
         }
-
       }
     },
     "Workspace": {
