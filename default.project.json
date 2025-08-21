@@ -19,15 +19,6 @@
     },
     "StarterGui": {
       "$className": "StarterGui",
-      "FarmerGUI": {
-        "$className": "ScreenGui",
-        "FarmerScript": {
-          "$path": "src/client/FarmerScript.client.lua"
-        },
-        "Frame": {
-          "$className": "Frame"
-        }
-      },
       "ChickenGUI": {
         "$className": "ScreenGui",
         "ChickenScript": {
@@ -41,8 +32,26 @@
           "UIStroke": {
             "$className": "UIStroke"
           },
-          "TextBox": {
-            "$className": "TextBox"
+          "TextLabel": {
+            "$className": "TextLabel"
+          }
+        }
+      },
+      "FarmerGUI": {
+        "$className": "ScreenGui",
+        "FarmerScript": {
+          "$path": "src/client/FarmerScript.client.lua"
+        },
+        "Frame": {
+          "$className": "Frame",
+          "UICorner": {
+            "$className": "UICorner"
+          },
+          "UIStroke": {
+            "$className": "UIStroke"
+          },
+          "TextLabel": {
+            "$className": "TextLabel"
           }
         }
       },
@@ -79,6 +88,21 @@
           }
         }
       },
+      "CountdownGUI": {
+        "$className": "ScreenGui",
+        "TextLabel": {
+          "$className": "TextLabel",
+          "CountDownScript": {
+            "$path": "src/client/CountdownScriptGUI.client.lua"
+          }
+        }
+      }
+    },
+    "Workspace": {
+      "$className": "Workspace",
+      "$properties": {
+        "FilteringEnabled": true
+      },
       "BearTrap": {
         "$className": "Model",
         "Close": {
@@ -102,21 +126,6 @@
             "$className": "Weld"
           }
         }
-      },
-      "CountdownGUI": {
-        "$className": "ScreenGui",
-        "TextLabel": {
-          "$className": "TextLabel",
-          "CountDownScript": {
-            "$path": "src/client/CountdownScriptGUI.client.lua"
-          }
-        }
-      }
-    },
-    "Workspace": {
-      "$className": "Workspace",
-      "$properties": {
-        "FilteringEnabled": true
       }
     },
     "Lighting": {
