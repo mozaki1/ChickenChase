@@ -1,6 +1,13 @@
-# Project place file
-/ChickenChase.rbxlx
+# Build + local state
+build/
+.roblox/
 
-# Roblox Studio lock files
-/*.rbxlx.lock
-/*.rbxl.lock
+# Never track place files (binary or XML)
+*.rbxl
+*.rbxlx
+*.rbxl.lock
+*.rbxlx.lock
+
+# Optional: avoid binary models; use .rbxmx (text) instead
+*.rbxm
+*.rbxm.lock

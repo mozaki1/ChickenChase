@@ -1,17 +1,31 @@
-local gui = script.Parent
+local label = script.Parent
+label.BackgroundTransparency = 1
+label.TextScaled = true
+label.Visible = false -- Start hidden
 
-local function UpdateStatus()
-	local clockTime = workspace:GetAttribute("Clock")
-	local gameStatus = workspace:GetAttribute("Status")
+-- ✨ Styling: black text with white outline
+label.TextColor3 = Color3.new(0, 0, 0) -- black text
+label.TextStrokeTransparency = 0       -- fully visible stroke
+label.TextStrokeColor3 = Color3.new(1, 1, 1) -- white outline
 
-	if gameStatus == "In-Game" or gameStatus == "Game starting in" then
-		gui.TextLabel.Text = (gameStatus == "In-Game" and "Game ending in: " or "Game starting in: ") .. clockTime
-	else
-		gui.TextLabel.Text = gameStatus
-	end
-end
+local event = game.ReplicatedStorage:WaitForChild("StartCountdown")
 
-workspace:GetAttributeChangedSignal("Clock"):Connect(UpdateStatus)
-workspace:GetAttributeChangedSignal("Status"):Connect(UpdateStatus)
+event.OnClientEvent:Connect(function(msg)
+    label.Visible = true
 
-gui.TextLabel.Text = "Game starting..."
+    if typeof(msg) == "number" then
+        -- This is the countdown
+        if msg > 0 then
+            task.wait(2) -- Wait for 2 seconds to show the message
+            label.Text = "Game starts in " .. msg .. " second" .. (msg == 1 and "" or "s")
+        else
+            -- The countdown has reached 0
+            label.Text = "Game Starting!"
+            label.Visible = false -- Then hide the label
+        end
+
+    elseif typeof(msg) == "string" then
+        -- This is for messages like "Waiting for more players"
+        label.Text = msg
+    end
+end)
