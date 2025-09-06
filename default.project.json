@@ -12,23 +12,16 @@
       "$className": "ServerScriptService",
       "Server": {
         "$path": "src/server"
+      },
+      "TrapScript": {
+        "$path": "src/server/TrapScript.server.lua"
       }
     },
     "StarterGui": {
       "$className": "StarterGui",
-    
-      "FarmerGUI": {
-        "$className": "ScreenGui",
-        "FarmerScript": {
-          "$path": "src/client/FarmerScript.client.lua"
-        },
-        "Frame": {
-          "$className": "Frame"
-        }
-      },
       "ChickenGUI": {
         "$className": "ScreenGui",
-        "FarmerScript": {
+        "ChickenScript": {
           "$path": "src/client/ChickenScript.client.lua"
         },
         "Frame": {
@@ -39,35 +32,62 @@
           "UIStroke": {
             "$className": "UIStroke"
           },
-          "TextBox": {
-            "$className": "TextBox"
+          "TextLabel": {
+            "$className": "TextLabel"
           }
         }
       },
-      "BearTrap": {
-    "$className": "Model",
-    "Close": {
-      "$className": "Part"
-    },
-    "Open": {
-      "$className": "Part"
-    },
-    "HitBox": {
-      "$className": "Part",
-      "TrapScript": {
-          "$path": "src/server/TrapScript.server.lua"
+      "FarmerGUI": {
+        "$className": "ScreenGui",
+        "FarmerScript": {
+          "$path": "src/client/FarmerScript.client.lua"
         },
-      "Bang": {
-        "$className": "Sound"
+        "Frame": {
+          "$className": "Frame",
+          "UICorner": {
+            "$className": "UICorner"
+          },
+          "UIStroke": {
+            "$className": "UIStroke"
+          },
+          "TextLabel": {
+            "$className": "TextLabel"
+          }
+        }
       },
-      "Captured": {
-        "$className": "BoolValue"
+      "ShopGUI": {
+        "$className": "ScreenGui",
+        "MainFrame": {
+          "$className": "Frame",
+          "$properties": {
+            "BackgroundTransparency": 1
+          },
+          "ShopFrame": {
+            "$className": "Frame",
+            "ScrollingFrame": {
+              "$className": "ScrollingFrame"
+            },
+            "X": {
+              "$className": "ImageButton",
+              "XButtonScript": {
+                "$path": "src/client/XButton.client.lua"
+              }
+            },
+            "TextLabel": {
+              "$className": "TextLabel"
+            }
+          },
+          "SideButtonsFrame": {
+            "$className": "Frame",
+            "ShopButton": {
+              "$className": "ImageButton",
+              "ShopButtonScript": {
+                "$path": "src/client/ShopButton.client.lua"
+              }
+            }
+          }
+        }
       },
-      "HitBox Terrain Joint": {
-        "$className": "Weld"
-      }
-    }
-  },
       "CountdownGUI": {
         "$className": "ScreenGui",
         "TextLabel": {
@@ -76,13 +96,36 @@
             "$path": "src/client/CountdownScriptGUI.client.lua"
           }
         }
-
       }
     },
     "Workspace": {
       "$className": "Workspace",
       "$properties": {
         "FilteringEnabled": true
+      },
+      "BearTrap": {
+        "$className": "Model",
+        "Close": {
+          "$className": "Part"
+        },
+        "Open": {
+          "$className": "Part"
+        },
+        "HitBox": {
+          "$className": "Part",
+          "TrapScript": {
+            "$path": "src/server/TrapScript.server.lua"
+          },
+          "Bang": {
+            "$className": "Sound"
+          },
+          "Captured": {
+            "$className": "BoolValue"
+          },
+          "HitBox Terrain Joint": {
+            "$className": "Weld"
+          }
+        }
       }
     },
     "Lighting": {
